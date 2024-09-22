@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Care Provider</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            font-family: "Roboto", sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --bg-color1: rgb(172, 213, 222);
+            --bg-color2: white;
+            --bg-color3: rgb(26, 78, 141);
+            --bg-color4: rgb(222, 244, 248);
+            --bg-color5: rgb(18, 58, 107);
+        }
+
+        header {
+            padding: 30px 0px;
+            background-color: var(--bg-color1);
+            color: var(--bg-color3);
+        }
+
+        .logo h3 {
+            font-style: italic;
+            font-size: 30px;
+            font-weight: bolder;
+            margin: -47px 160px;
+            letter-spacing: 4px;
+        }
+
+        /* .left span {
+            font-style: italic;
+            font-size: 30px;
+            font-weight: bolder;
+            margin: -10px 160px;
+            letter-spacing: 4px;
+        } */
+        .logo img {
+            display: flex;
+            margin: -10px 60px;
+            width: 90px;
+            background-color: var(--bg-color1);
+        }
+
+        header h3 {
+            font-weight: bolder;
+        }
+
+        .mid ul {
+            position: absolute;
+            right: 120px;
+            top: 0px;
+        }
+
+        .mid ul {
+            display: flex;
+            position: absolute;
+            margin: -20px 25px;
+        }
+
+        .mid ul li {
+            list-style: none;
+            padding: 64px 40px;
+        }
+
+        .mid ul li a:hover,
+        .mid ul li a.active {
+            text-decoration: underline;
+            font-size: 18px;
+            color: var(--bg-color3);
+            font-weight: bolder;
+
+        }
+
+        .mid ul li a {
+            text-decoration: none;
+        }
+
+        .right a {
+            border: 2px solid var(--bg-color3);
+            padding: 3px 15px;
+            border-radius: 15px;
+            text-decoration: none;
+            position: absolute;
+            top: 40px;
+            right: 70px;
+        }
+
+        .right a:hover {
+            background-color: var(--bg-color3);
+            color: white;
+            font-size: 18px;
+            font-weight: bolder;
+        }
+
+
+        button {
+            border: 2px solid var(--bg-color4);
+            background-color: var(--bg-color4);
+            font-size: 18px;
+            border-radius: 10px;
+            padding: 10px 45px;
+            position: fixed;
+            right: 50px;
+            bottom: 30px;
+            color: var(--bg-color3);
+            font-weight: bolder;
+            z-index: 1;
+            text-decoration: none;
+        }
+
+        button a {
+            text-decoration: none;
+        }
+
+        button:hover,
+        button a:hover {
+            font-size: x-large;
+        }
+
+        .container {
+            background-color: var(--bg-color1);
+            height: 30rem;
+            /* border: 2px solid black; */
+            padding: 100px 0px;
+
+        }
+
+        .container h1 {
+            margin: 0px 75px;
+            font-size: 100px;
+            color: var(--bg-color3);
+        }
+
+        .container h3 {
+            margin: 0px 75px;
+            font-size: 25px;
+            font-weight: normal;
+            color: var(--bg-color3);
+        }
+
+        .img img {
+            display: flex;
+            position: absolute;
+            right: 0px;
+            top: 18rem;
+        }
+
+
+        /* ............................ Section-2   Start................................. */
+
+        .section2 {
+            /* border: 2px solid black; */
+        }
+
+        .header2 {
+            margin-top: 200px;
+        }
+
+        .header2 h1 {
+            text-align: center;
+            font-size: 70px;
+            color: var(--bg-color3);
+        }
+
+        .section2List ul {
+            margin-left: 23%;
+            display: flex;
+        }
+
+        .section2List ul li {
+            padding: 40px;
+            list-style: none;
+            font-size: 20px;
+            font-weight: normal;
+            color: var(--bg-color3);
+        }
+
+        .bookApoinment {
+            margin-top: 10px;
+        }
+
+        .bookApoinment span {
+            display: flex;
+        }
+
+        .bookApoinment a {
+            margin: 0px auto;
+            color: white;
+            background-color: var(--bg-color3);
+            text-decoration: none;
+            border: 2px solid var(--bg-color3);
+            padding: 15px 25px;
+            border-radius: 25px;
+        }
+
+        .bookApoinment a:hover {
+            font-weight: bolder;
+            background-color: var(--bg-color5);
+        }
+
+        .petImages {
+            display: flex;
+            margin-top: 50px;
+        }
+
+        .petImages div {
+            margin: 0px auto;
+            padding-bottom: 50px;
+        }
+
+        .petImages div span img {
+            padding: 3px;
+            border-radius: 15px;
+            width: 250px;
+            height: 180px;
+        }
+
+        /* ............................ Section-2   End................................. */
+
+        /* ............................ Section-3   Start................................. */
+        .section3 {
+            padding: 10px 0px;
+            background-color: var(--bg-color1);
+            height: 60rem;
+        }
+
+        .header3 {
+            margin-top: 100px;
+        }
+
+        .header3 h1 {
+            text-align: center;
+            font-size: 70px;
+            color: var(--bg-color3);
+        }
+
+        .threebox {
+            background-color: var(--bg-color1);
+            display: flex;
+        }
+
+        .dimention {
+            border-radius: 15px;
+            width: 300px;
+            height: 350px;
+            padding: 10px;
+        }
+
+        #first {
+            background-color: var(--bg-color2);
+            position: absolute;
+            left: 120px;
+            margin: 60px 0px;
+        }
+
+        #second {
+            background-color: var(--bg-color2);
+            position: absolute;
+            left: 39%;
+            margin: 200px 0px;
+        }
+
+        #three {
+            background-color: var(--bg-color2);
+            position: absolute;
+            right: 120px;
+            margin: 130px 0px;
+        }
+
+        .dimention h2 {
+            position: absolute;
+            bottom: 10px;
+            padding: 20px 20px;
+            font-size: 20px;
+            color: var(--bg-color3);
+        }
+
+        .dimention img {
+            background-color: var(--bg-color1);
+            border-radius: 50%;
+            width: 100px;
+            margin: 20px;
+        }
+
+        .dimention p {
+            margin: 0px 20px;
+            font-size: 20px;
+            color: var(--bg-color3);
+            opacity: 0.5;
+        }
+
+        /* ............................ Section-3   End................................. */
+
+        /* ............................. Section-4  Start................................. */
+        .section4 {
+            border: 2px solid black;
+            background-color: var(--bg-color3);
+            color: var(--bg-color2);
+        }
+
+        .s4container {
+            text-align: center;
+            margin-top: 150px;
+        }
+
+        .s4container h1 {
+            font-size: 70px;
+            color: var(--bg-color2);
+        }
+
+        .followUs {
+            margin-top: 50px;
+        }
+
+        .followUs h3 {
+            text-align: center;
+        }
+
+        .followUs h3 a {
+            font-weight: normal;
+            padding: 5px 25px;
+            border: 2px solid var(--bg-color2);
+            background-color: var(--bg-color2);
+            border-radius: 20px;
+            text-decoration: none;
+            color: var(--bg-color3);
+        }
+
+        .followUs h3 a:hover {
+            font-weight: bolder;
+            font-size: 20px;
+            color: black;
+        }
+
+        .section4img {
+            margin: 75px 0px 20px 0px;
+            display: flex;
+        }
+
+        .section4img span {
+            margin: 0px auto;
+        }
+
+        .section4img span img {
+            border-radius: 15px;
+            width: 250px;
+            height: 200px;
+        }
+
+        /* ............................. Section-4  End................................. */
+
+        /* ............................. Section-5  Start................................. */
+        .section5 {
+            margin-top: 40px;
+        }
+        .logolast img{
+            display: flex;
+            margin: -10px 60px;
+            width: 90px;
+            background-color: var(--bg-color2);
+        }
+        .logolast h3{
+            color: var(--bg-color3);
+            font-style: italic;
+            font-size: 30px;
+            font-weight: bolder;
+            margin: -47px 160px;
+            letter-spacing: 4px;
+        }
+        .footerTable{
+            color: var(--bg-color3);
+            margin-left: 30%;
+        }
+        table tr{
+            text-align: left;
+        }
+        table tr th{
+            font-size: large;
+            padding: 20px 50px;
+        }
+        table tr td{
+            padding: 5px 50px;
+        }
+        table tr td a{
+            color: var(--bg-color3);
+            text-decoration: none;
+        }
+        table tr td a:hover{
+            text-decoration: underline;
+        }
+        .hr{
+            margin: 20px 50px;
+            border: 2px solid var(--bg-color3);
+        }
+        footer{
+            margin: 50px 0px;
+            display: flex;
+        }
+        footer p{
+            color: var(--bg-color3);
+            margin: 0px auto;
+        }
+    </style>
+</head>
+
+<body>
+    <button><a href="demoMode.html">Let's Chat!</a></button>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="logo.png" alt="img">
+                <h3>Ponto Pet</h3>
+            </div>
+            <!-- <div class="left">
+                <span>Ponto Pet</span>
+            </div> -->
+
+
+            <div class="mid">
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="demoMode.html">Services</a></li>
+                    <li><a href="demoMode.html">About</a></li>
+                    <li><a href="demoMode.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="right">
+                <span><a href="demoMode.html">Log In</a></span>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>The Best Pet</h1>
+        <h1>Groomer</h1>
+        <h1>in Town</h1>
+        <h3>For a pawfect look and feel</h3>
+    </div>
+
+    <div class="img">
+        <img src="https://static.wixstatic.com/media/84770f_cc7fbf222d044cf09028f921a0cfe36e~mv2.png/v1/fill/w_1279,h_769,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/shutterstock_184908566%20copy.png"
+            alt="animal" width="900px">
+    </div>
+
+    <div class="section2">
+        <div class="header2">
+            <h1>Your pet deserves </h1>
+            <h1>to be pampered!</h1>
+        </div>
+
+        <div class="section2List">
+            <ul>
+                <li>Bath or Shower</li>
+                <li>Hands-On Pet Assessment</li>
+                <li>Safe Drying</li>
+            </ul>
+        </div>
+        <div class="bookApoinment">
+            <span><a href="demoMode.html">Book An Appoinment</a></span>
+        </div>
+
+        <div class="petImages">
+            <div>
+                <span><img
+                        src="https://www.metlifepetinsurance.com/content/dam/metlifecom/us/metlifepetinsurance/images/how-to-bathe-a-dog-properly-why-it-s-important-min.webp"
+                        alt="img"></span>
+                <span><img
+                        src="https://previews.123rf.com/images/levstudio/levstudio2001/levstudio200100257/137633644-groomer-cut-cat-hair-in-the-salon-pet-care-at-a-pet-store-uses-a-trimmer-to-cut-cat-hair.jpg"
+                        alt="img"></span>
+                <span><img src="https://cdn.shopify.com/s/files/1/0259/9626/3490/files/dog-grooming-1.png?v=1665519040"
+                        alt="img"></span>
+                <span><img
+                        src="https://media.istockphoto.com/id/599974692/photo/woman-using-a-comb-brush-the-persian-cat.jpg?s=612x612&w=0&k=20&c=sBif_WiCENQi-ca8svMEgAiV1DgEng2Ulk7JirtlQWA="
+                        alt="img"></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="section3">
+        <div class="header3">
+            <h1>What Our Happy </h1>
+            <h1>Clients Say</h1>
+        </div>
+        <div class="threebox">
+            <div class="dimention" id="first">
+                <img src="https://static.wixstatic.com/media/c837a6_5a8f08d69ed14df69f51095a389122ea~mv2.png/v1/fill/w_124,h_124,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/test_3_2.png"
+                    alt="img">
+                <p>
+                    “I'm a testimonial. Click to edit me and add text that says something nice about you and your
+                    services.”
+                </p>
+                <h2>Kmlesh</h2>
+            </div>
+            <div class="dimention" id="second">
+                <img src="https://static.wixstatic.com/media/c837a6_05f52a6820f34cba9902e759b418b5b6~mv2.png/v1/fill/w_124,h_124,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/test_1.png"
+                    alt="img">
+                <p>
+                    “I'm a testimonial. Click to edit me and add text that says something nice about you and your
+                    services.”
+                </p>
+                <h2>Shera</h2>
+            </div>
+            <div class="dimention" id="three">
+                <img src="https://static.wixstatic.com/media/c837a6_6a568fac61d1476898f4ea6cccbef66c~mv2.png/v1/fill/w_129,h_124,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/test_2.png"
+                    alt="img">
+                <p>
+                    “I'm a testimonial. Click to edit me and add text that says something nice about you and your
+                    services.”
+                </p>
+                <h2>Bokya</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="section4">
+        <div class="s4container">
+            <h1>See All Our Glamorous</h1>
+            <h1> Customers</h1>
+        </div>
+        <div class="followUs">
+            <h3><a href="demoMode.html">Follow Us</a></h3>
+        </div>
+
+        <div class="section4img">
+            <span><img
+                    src="https://cdn.firstcry.com/education/2023/01/19165304/Names-Of-Pet-Animals-In-English-For-Kids-696x476.jpg"
+                    alt="img"></span>
+            <span><img
+                    src="https://cdn2.psychologytoday.com/assets/styles/manual_crop_1_1_1200x1200/public/teaser_image/blog_entry/2023-01/kitty.green66--2.jpg?itok=5GTNcpbV"
+                    alt="img"></span>
+            <span><img
+                    src="https://www.mercurynews.com/wp-content/uploads/2022/01/SJM-L-FORLOVEPETS-0121-01_92929159.jpg?w=525"
+                    alt="img"></span>
+            <span><img
+                    src="https://keikiearlylearning.com.au/wp-content/uploads/2019/03/adorable-animal-baby-160933.jpg"
+                    alt="img"></span>
+            <span><img
+                    src="https://storage.googleapis.com/petbacker/images/blog/2021/why-do-animals-love-petting/animal-loves-petting-1.1.jpg"
+                    alt="img"></span>
+        </div>
+    </div>
+    <div class="section5">
+        <div class="logolast">
+            <img src="logo.png" alt="img">
+            <h3>Ponto Pet</h3>
+        </div>
+
+        <div class="footerTable">
+            <table>
+                <tr>
+                    <th>Address</th>
+                    <th>Contact</th>
+                    <th>Socials</th>
+                </tr>
+                <tr>
+                    <td>500 Terry Francine Street,</td>
+                    <td>info@mysite.com</td>
+                    <td><a href="demoMode.html">Facebook</a></td>
+                </tr>
+                <tr>
+                    <td>San Francisco, CA 94158</td>
+                    <td>123-456-7890</td>
+                    <td><a href="demoMode.html">Twitter</a></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td><a href="demoMode.html">YouTube</a></td>
+                </tr>
+            </table>
+        </div>
+        <hr class="hr">
+    </div>
+    <footer>
+       <p>© 2035 by Ponto Pet. Powered and secured by Wix</p> 
+    </footer>
+</body>
+
+</html>
